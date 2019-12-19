@@ -198,6 +198,8 @@ public class Controller implements Initializable {
 
 		} else {
 
+			String temp = "";
+
 			File file = fileChooser.showSaveDialog(stage);
 
 			for (Reference row : selectedItems) {
@@ -209,223 +211,223 @@ public class Controller implements Initializable {
 						   ref.getMonth().equals(row.getMonth()) && ref.getTitle().equals(row.getTitle()) &&
 						   ref.getType().equals(row.getType())) {
 
-						String temp = "";
+
 
 						if (row.getType().equals("Article")) {
 
 							Article articleRow = (Article) row;
 
-							if (!articleRow.getKey().equals("null")) {
+							if (!articleRow.getKey().equals("")) {
 
-								temp = "@" + "article" + "{" + articleRow.getKey() + "," + "\n";
+								temp = temp + "@" + "article" + "{" + articleRow.getKey() + "," + "\n";
 							}
-							if (!articleRow.getTitle().equals("null")) {
+							if (!articleRow.getTitle().equals("")) {
 								temp = temp + "title={" + articleRow.getTitle() + "}," + "\n";
 							}
-							if (!articleRow.getAuthor().equals("null")) {
+							if (!articleRow.getAuthor().equals("")) {
 								temp = temp + "author={" + articleRow.getAuthor() + "}," + "\n";
 							}
-							if (!articleRow.getMonth().equals("null")) {
+							if (!articleRow.getMonth().equals("")) {
 								temp = temp + "month={" + articleRow.getMonth() + "}," + "\n";
 							}
-							if (!articleRow.getYear().equals("null")) {
+							if (!articleRow.getYear().equals("")) {
 								temp = temp + "year={" + articleRow.getYear() + "}," + "\n";
 							}
-							if (!articleRow.getVolume().equals("null")) {
+							if (!articleRow.getVolume().equals("")) {
 								temp = temp + "volume={" + articleRow.getVolume() + "}" + "," + "\n";
 							}
-							if (!articleRow.getNumber().equals("null")) {
+							if (!articleRow.getNumber().equals("")) {
 								temp = temp + "number={" + articleRow.getNumber() + "}" + "," + "\n";
 							}
-							if (!articleRow.getPages().equals("null")) {
+							if (!articleRow.getPages().equals("")) {
 								temp = temp + "pages={" + articleRow.getPages() + "}" + "," + "\n";
 							}
 							temp = temp.substring(0, temp.length() - 2);
-							temp = temp + "\n" + "}" + ",";
-						} else if (row.getType().equals("Book")) {
+							temp = temp + "\n" + "}" + "," + "\n";
+						}if (row.getType().equals("Book")) {
 
 							Book bookRow = (Book) row;
-							if (!bookRow.getKey().equals("null")) {
-								temp = "@" + "book" + "{" + bookRow.getKey() + "," + "\n";
+							if (!bookRow.getKey().equals("")) {
+								temp = temp + "@" + "book" + "{" + bookRow.getKey() + "," + "\n";
 							}
-							if (!bookRow.getTitle().equals("null")) {
+							if (!bookRow.getTitle().equals("")) {
 								temp = temp + "title={" + bookRow.getTitle() + "}," + "\n";
 							}
-							if (!bookRow.getAuthor().equals("null")) {
+							if (!bookRow.getAuthor().equals("")) {
 								temp = temp + "author={" + bookRow.getAuthor() + "}," + "\n";
 							}
-							if (!bookRow.getMonth().equals("null")) {
+							if (!bookRow.getMonth().equals("")) {
 								temp = temp + "month={" + bookRow.getMonth() + "}," + "\n";
 							}
-							if (!bookRow.getYear().equals("null")) {
+							if (!bookRow.getYear().equals("")) {
 								temp = temp + "year={" + bookRow.getYear() + "}," + "\n";
 							}
-							if (!bookRow.getPublisher().equals("null")) {
+							if (!bookRow.getPublisher().equals("")) {
 								temp = temp + "publisher={" + bookRow.getVolume() + "}" + "," + "\n";
 							}
-							if (!bookRow.getVolume().equals("null")) {
+							if (!bookRow.getVolume().equals("")) {
 								temp = temp + "volume={" + bookRow.getVolume() + "}" + "," + "\n";
 							}
-							if (!bookRow.getSeries().equals("null")) {
+							if (!bookRow.getSeries().equals("")) {
 								temp = temp + "series={" + bookRow.getSeries() + "}" + "," + "\n";
 							}
-							if (!bookRow.getAddress().equals("null")) {
+							if (!bookRow.getAddress().equals("")) {
 								temp = temp + "address={" + bookRow.getAddress() + "}" + "," + "\n";
 							}
-							if (!bookRow.getEdition().equals("null")) {
+							if (!bookRow.getEdition().equals("")) {
 								temp = temp + "edition={" + bookRow.getEdition() + "}" + "," + "\n";
 							}
 							temp = temp.substring(0, temp.length() - 2);
-							temp = temp + "\n" + "}" + ",";
-						} else if (row.getType().equals("Conference")) {
+							temp = temp + "\n" + "}" + "," + "\n";
+						}if (row.getType().equals("Conference")) {
 
 							Conference conferenceRow = (Conference) row;
-							if (!conferenceRow.getKey().equals("null")) {
-								temp = "@" + "conference" + "{" + conferenceRow.getKey() + "," + "\n";
+							if (!conferenceRow.getKey().equals("")) {
+								temp = temp + "@" + "conference" + "{" + conferenceRow.getKey() + "," + "\n";
 							}
-							if (!conferenceRow.getTitle().equals("null")) {
+							if (!conferenceRow.getTitle().equals("")) {
 								temp = temp + "title={" + conferenceRow.getTitle() + "}," + "\n";
 							}
-							if (!conferenceRow.getAuthor().equals("null")) {
+							if (!conferenceRow.getAuthor().equals("")) {
 								temp = temp + "author={" + conferenceRow.getAuthor() + "}," + "\n";
 							}
-							if (!conferenceRow.getMonth().equals("null")) {
+							if (!conferenceRow.getMonth().equals("")) {
 								temp = temp + "month={" + conferenceRow.getMonth() + "}," + "\n";
 							}
-							if (!conferenceRow.getYear().equals("null")) {
+							if (!conferenceRow.getYear().equals("")) {
 								temp = temp + "year={" + conferenceRow.getYear() + "}," + "\n";
 							}
-							if (!conferenceRow.getPublisher().equals("null")) {
+							if (!conferenceRow.getPublisher().equals("")) {
 								temp = temp + "publisher={" + conferenceRow.getVolume() + "}" + "," + "\n";
 							}
-							if (!conferenceRow.getVolume().equals("null")) {
+							if (!conferenceRow.getVolume().equals("")) {
 								temp = temp + "volume={" + conferenceRow.getVolume() + "}" + "," + "\n";
 							}
-							if (!conferenceRow.getSeries().equals("null")) {
+							if (!conferenceRow.getSeries().equals("")) {
 								temp = temp + "series={" + conferenceRow.getSeries() + "}" + "," + "\n";
 							}
-							if (!conferenceRow.getAddress().equals("null")) {
+							if (!conferenceRow.getAddress().equals("")) {
 								temp = temp + "address={" + conferenceRow.getAddress() + "}" + "," + "\n";
 							}
-							if (!conferenceRow.getEdition().equals("null")) {
+							if (!conferenceRow.getEdition().equals("")) {
 								temp = temp + "edition={" + conferenceRow.getEdition() + "}" + "," + "\n";
 							}
-							if (!conferenceRow.getPages().equals("null")) {
+							if (!conferenceRow.getPages().equals("")) {
 								temp = temp + "pages={" + conferenceRow.getPages() + "}" + "," + "\n";
 							}
-							if (!conferenceRow.getBookTitle().equals("null")) {
+							if (!conferenceRow.getBookTitle().equals("")) {
 								temp = temp + "booktitle={" + conferenceRow.getBookTitle() + "}" + "," + "\n";
 							}
-							if (!conferenceRow.getOrganization().equals("null")) {
+							if (!conferenceRow.getOrganization().equals("")) {
 								temp = temp + "organization={" + conferenceRow.getOrganization() + "}" + "," + "\n";
 							}
 							temp = temp.substring(0, temp.length() - 2);
-							temp = temp + "\n" + "}" + ",";
-						} else if (row.getType().equals("MastersThesis")) {
+							temp = temp + "\n" + "}" + "," + "\n";
+						}if (row.getType().equals("MastersThesis")) {
 
 							MastersThesis mastersThesisRow = (MastersThesis) row;
-							if (!mastersThesisRow.getKey().equals("null")) {
-								temp = "@" + "mastersthesis" + "{" + mastersThesisRow.getKey() + "," + "\n";
+							if (!mastersThesisRow.getKey().equals("")) {
+								temp = temp + "@" + "mastersthesis" + "{" + mastersThesisRow.getKey() + "," + "\n";
 							}
-							if (!mastersThesisRow.getTitle().equals("null")) {
+							if (!mastersThesisRow.getTitle().equals("")) {
 								temp = temp + "title={" + mastersThesisRow.getTitle() + "}," + "\n";
 							}
-							if (!mastersThesisRow.getAuthor().equals("null")) {
+							if (!mastersThesisRow.getAuthor().equals("")) {
 								temp = temp + "author={" + mastersThesisRow.getAuthor() + "}," + "\n";
 							}
-							if (!mastersThesisRow.getMonth().equals("null")) {
+							if (!mastersThesisRow.getMonth().equals("")) {
 								temp = temp + "month={" + mastersThesisRow.getMonth() + "}," + "\n";
 							}
-							if (!mastersThesisRow.getYear().equals("null")) {
+							if (!mastersThesisRow.getYear().equals("")) {
 								temp = temp + "year={" + mastersThesisRow.getYear() + "}," + "\n";
 							}
-							if (!mastersThesisRow.getSchool().equals("null")) {
+							if (!mastersThesisRow.getSchool().equals("")) {
 								temp = temp + "school={" + mastersThesisRow.getSchool() + "}" + "," + "\n";
 							}
-							if (!mastersThesisRow.getAddress().equals("null")) {
+							if (!mastersThesisRow.getAddress().equals("")) {
 								temp = temp + "address={" + mastersThesisRow.getAddress() + "}" + "," + "\n";
 							}
 							temp = temp.substring(0, temp.length() - 2);
-							temp = temp + "\n" + "}" + ",";
-						} else if (row.getType().equals("Misc")) {
+							temp = temp + "\n" + "}" + "," + "\n";
+						}if (row.getType().equals("Misc")) {
 
 							Misc miscRow = (Misc) row;
-							if (!miscRow.getKey().equals("null")) {
-								temp = "@" + "misc" + "{" + miscRow.getKey() + "," + "\n";
+							if (!miscRow.getKey().equals("")) {
+								temp = temp + "@" + "misc" + "{" + miscRow.getKey() + "," + "\n";
 							}
-							if (!miscRow.getTitle().equals("null")) {
+							if (!miscRow.getTitle().equals("")) {
 								temp = temp + "title={" + miscRow.getTitle() + "}," + "\n";
 							}
-							if (!miscRow.getAuthor().equals("null")) {
+							if (!miscRow.getAuthor().equals("")) {
 								temp = temp + "author={" + miscRow.getAuthor() + "}," + "\n";
 							}
-							if (!miscRow.getMonth().equals("null")) {
+							if (!miscRow.getMonth().equals("")) {
 								temp = temp + "month={" + miscRow.getMonth() + "}," + "\n";
 							}
-							if (!miscRow.getYear().equals("null")) {
+							if (!miscRow.getYear().equals("")) {
 								temp = temp + "year={" + miscRow.getYear() + "}," + "\n";
 							}
-							if (!miscRow.getHowPublished().equals("null")) {
+							if (!miscRow.getHowPublished().equals("")) {
 								temp = temp + "howpublished={" + miscRow.getHowPublished() + "}" + "," + "\n";
 							}
 							temp = temp.substring(0, temp.length() - 2);
-							temp = temp + "\n" + "}" + ",";
-						} else if (row.getType().equals("PhdThesis")) {
+							temp = temp + "\n" + "}" + "," + "\n";
+						}if (row.getType().equals("PhdThesis")) {
 
 							PhdThesis phdThesisRow = (PhdThesis) row;
-							if (!phdThesisRow.getKey().equals("null")) {
-								temp = "@" + "phdthesis" + "{" + phdThesisRow.getKey() + "," + "\n";
+							if (!phdThesisRow.getKey().equals("")) {
+								temp = temp + "@" + "phdthesis" + "{" + phdThesisRow.getKey() + "," + "\n";
 							}
-							if (!phdThesisRow.getTitle().equals("null")) {
+							if (!phdThesisRow.getTitle().equals("")) {
 								temp = temp + "title={" + phdThesisRow.getTitle() + "}," + "\n";
 							}
-							if (!phdThesisRow.getAuthor().equals("null")) {
+							if (!phdThesisRow.getAuthor().equals("")) {
 								temp = temp + "author={" + phdThesisRow.getAuthor() + "}," + "\n";
 							}
-							if (!phdThesisRow.getMonth().equals("null")) {
+							if (!phdThesisRow.getMonth().equals("")) {
 								temp = temp + "month={" + phdThesisRow.getMonth() + "}," + "\n";
 							}
-							if (!phdThesisRow.getYear().equals("null")) {
+							if (!phdThesisRow.getYear().equals("")) {
 								temp = temp + "year={" + phdThesisRow.getYear() + "}," + "\n";
 							}
-							if (!phdThesisRow.getSchool().equals("null")) {
+							if (!phdThesisRow.getSchool().equals("")) {
 								temp = temp + "school={" + phdThesisRow.getSchool() + "}" + "," + "\n";
 							}
-							if (!phdThesisRow.getAddress().equals("null")) {
+							if (!phdThesisRow.getAddress().equals("")) {
 								temp = temp + "address={" + phdThesisRow.getAddress() + "}" + "," + "\n";
 							}
 							temp = temp.substring(0, temp.length() - 2);
-							temp = temp + "\n" + "}" + ",";
-						} else if (row.getType().equals("Proceedings")) {
+							temp = temp + "\n" + "}" + "," + "\n";
+						}if (row.getType().equals("Proceedings")) {
 
 							Proceedings proceedingsRow = (Proceedings) row;
-							if (!proceedingsRow.getKey().equals("null")) {
-								temp = "@" + "proceedings" + "{" + proceedingsRow.getKey() + "," + "\n";
+							if (!proceedingsRow.getKey().equals("")) {
+								temp = temp + "@" + "proceedings" + "{" + proceedingsRow.getKey() + "," + "\n";
 							}
-							if (!proceedingsRow.getTitle().equals("null")) {
+							if (!proceedingsRow.getTitle().equals("")) {
 								temp = temp + "title={" + proceedingsRow.getTitle() + "}," + "\n";
 							}
-							if (!proceedingsRow.getAuthor().equals("null")) {
+							if (!proceedingsRow.getAuthor().equals("")) {
 								temp = temp + "author={" + proceedingsRow.getAuthor() + "}," + "\n";
 							}
-							if (!proceedingsRow.getMonth().equals("null")) {
+							if (!proceedingsRow.getMonth().equals("")) {
 								temp = temp + "month={" + proceedingsRow.getMonth() + "}," + "\n";
 							}
-							if (!proceedingsRow.getYear().equals("null")) {
+							if (!proceedingsRow.getYear().equals("")) {
 								temp = temp + "year={" + proceedingsRow.getYear() + "}," + "\n";
 							}
-							if (!proceedingsRow.getPublisher().equals("null")) {
+							if (!proceedingsRow.getPublisher().equals("")) {
 								temp = temp + "publisher={" + proceedingsRow.getPublisher() + "}" + "," + "\n";
 							}
-							if (!proceedingsRow.getVolume().equals("null")) {
+							if (!proceedingsRow.getVolume().equals("")) {
 								temp = temp + "volume={" + proceedingsRow.getVolume() + "}" + "," + "\n";
 							}
 							temp = temp.substring(0, temp.length() - 2);
-							temp = temp + "\n" + "}" + ",";
+							temp = temp + "\n" + "}" + "," + "\n";
 						}
 						counter--;
 						if (counter == 0) {
-							temp = temp.substring(0, temp.length() - 1);
+							temp = temp.substring(0, temp.length() - 2);
 						}
 
 						if (file != null) {
