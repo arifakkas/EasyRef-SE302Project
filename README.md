@@ -27,7 +27,6 @@ EasyRef is an application that works on Windows. It is available free of charge.
 
 We are thankful for any bug reports or other feedback.
 If you have ideas for new features you want to be included in EasyRef, [send us an email](utkuyuri@gmail.com)!
-If you need support in using EasyRef, please read [the documentation](bizim requirementslerin linkleri)! first.
 
 
 
