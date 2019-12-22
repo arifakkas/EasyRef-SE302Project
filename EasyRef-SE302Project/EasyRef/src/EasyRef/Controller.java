@@ -253,7 +253,7 @@ public class Controller implements Initializable {
 		if (counter == 0) {
 
 			Alert ioAlert = new Alert(Alert.AlertType.ERROR, "ERROR!", ButtonType.OK);
-			ioAlert.setContentText("You did not select any file, please select file(s) before exporting");
+			ioAlert.setContentText("You did not select any reference, please select reference(s) before exporting");
 			ioAlert.showAndWait();
 			if (ioAlert.getResult() == ButtonType.OK) {
 				ioAlert.close();
