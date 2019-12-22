@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="398.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EasyRef.AboutController">
+   <children>
+      <Label layoutX="34.0" layoutY="14.0" prefHeight="109.0" prefWidth="330.0" text="EasyRef">
+         <font>
+            <Font name="Liberation Serif" size="96.0" />
+         </font></Label>
+      <Label layoutX="88.0" layoutY="123.0" prefHeight="76.0" prefWidth="221.0" text="Open Source">
+         <font>
+            <Font name="Liberation Sans" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="200.0" text="Reference Controller">
+         <font>
+            <Font name="Liberation Serif" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="265.0" text="https://github.com/arifakkas/EasyRef-SE302Project">
+         <font>
+            <Font name="Liberation Sans" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="closeButton" layoutX="100.0" layoutY="320.0" mnemonicParsing="false" onAction="#closeAbout" prefHeight="50.0" prefWidth="200.0" text="Close">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
