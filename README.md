@@ -26,11 +26,9 @@ EasyRef is an application that works on Windows. It is available free of charge.
 ## Bug Reports, Suggestions, Other Feedback
 
 We are thankful for any bug reports or other feedback.
-If you have ideas for new features you want to be included in EasyRef, [send us an email](utkuyuri@gmail.com)!
+If you have ideas for new features you want to be included in EasyRef, please contact with us!
 
-
-
-  [BibTeX]: https://www.ctan.org/pkg/bibtex
-  [Biblatex]: https://www.ctan.org/pkg/biblatex
-  [install4j]: https://www.ej-technologies.com/products/install4j/overview.html
-  [JavaFX]: https://en.wikipedia.org/wiki/JavaFX
+[BibTeX]: https://www.ctan.org/pkg/bibtex
+[Biblatex]: https://www.ctan.org/pkg/biblatex
+[install4j]: https://www.ej-technologies.com/products/install4j/overview.html
+[JavaFX]: https://en.wikipedia.org/wiki/JavaFX
