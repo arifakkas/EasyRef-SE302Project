@@ -23,7 +23,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.FileChooser;
 import javafx.stage.Modality;
-import javafx.stage.Stage;
+javafx.stage.Stage;
 import javafx.stage.Window;
 import org.jbibtex.*;
 
@@ -253,7 +253,7 @@ public class Controller implements Initializable {
 		if (counter == 0) {
 
 			Alert ioAlert = new Alert(Alert.AlertType.ERROR, "ERROR!", ButtonType.OK);
-			ioAlert.setContentText("You did not select any file, please select file(s) before importing");
+			ioAlert.setContentText("You did not select any file, please select file(s) before exporting");
 			ioAlert.showAndWait();
 			if (ioAlert.getResult() == ButtonType.OK) {
 				ioAlert.close();
