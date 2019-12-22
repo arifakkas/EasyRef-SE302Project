@@ -5,7 +5,7 @@ EasyRef is a reference management tool.
 
 
 ## Features
-EasyRef is an application that works on Windows. It is available free of charge and is actively developed.
+EasyRef is an application that works on Windows. It is available free of charge.
 
 
 ### Collect
