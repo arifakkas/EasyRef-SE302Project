@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="374.0" prefWidth="505.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EasyRef.SearchController">
+    <children>
+        <TextField fx:id="authorField" layoutX="88.0" layoutY="60.0" />
+        <TextField fx:id="titleField" layoutX="88.0" layoutY="128.0" />
+        <TextField fx:id="minYearField" layoutX="88.0" layoutY="270.0" />
+        <TextField fx:id="maxYearField" layoutX="266.0" layoutY="270.0" />
+        <Label layoutX="249.0" layoutY="274.0" text="-" />
+        <Label layoutX="88.0" layoutY="43.0" text="Author" />
+        <Label layoutX="88.0" layoutY="111.0" text="Title" />
+        <Label layoutX="86.0" layoutY="183.0" text="Type" />
+        <ComboBox fx:id="typeField" layoutX="88.0" layoutY="200.0" prefWidth="150.0" />
+        <Label layoutX="86.0" layoutY="253.0" text="Minimum Year" />
+        <Label layoutX="266.0" layoutY="253.0" text="Maximum Year" />
+        <Label layoutX="86.0" layoutY="14.0" text="Fill the fields you desire below to filter your table" />
+      <Button fx:id="FilterBtn" layoutX="363.0" layoutY="327.0" mnemonicParsing="false" onAction="#Filter" text="Filter" />
+    </children>
+</AnchorPane>
